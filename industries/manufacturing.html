@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Manufacturing AI Solutions – MJ Smart Solution</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="../index.html#hero" class="nav__logo">
+        <img src="../assets/img/mj-logo.png" alt="MJ Smart Solution logo" class="logo-img" />
+        <span class="logo-text">MJ Smart Solution</span>
+      </a>
+
+      <nav class="nav__links">
+  <a href="../index.html#hero">Home</a>
+  <a href="../index.html#solutions">Solutions</a>
+  <a href="../index.html#industries">Industries</a>
+  <a href="../index.html#why-us">Why MJ</a>
+  <a href="../index.html#contact">Get in Touch</a>
+  <a href="#" class="js-open-auth nav__login">Log In</a>
+</nav>
+
+<button class="btn btn--primary nav__cta js-open-auth" type="button">Get Started</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero--inner">
+      <div class="hero__content">
+        <span class="pill">Industry</span>
+        <h1 class="hero-title">
+          <span>Intelligent</span>
+          <span>Manufacturing AI</span>
+        </h1>
+        <p>
+          Use AI to power predictive maintenance, quality inspection, and digital twins
+          across your plants and production lines.
+        </p>
+        <div class="hero__actions">
+          <a href="../index.html#contact" class="btn btn--primary">Talk to Manufacturing Experts</a>
+          <a href="../index.html#solutions" class="btn btn--ghost">Explore All Solutions</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__header" style="text-align:left; margin-left:0;">
+        <span class="pill">What We Solve</span>
+      </div>
+
+      <div class="solutions-grid">
+        <article class="glass-card">
+          <h3>Predictive Maintenance</h3>
+          <p>Anticipate equipment failures and schedule maintenance with minimal downtime.</p>
+        </article>
+        <article class="glass-card">
+          <h3>Quality Inspection</h3>
+          <p>Use computer vision and ML to detect defects earlier and reduce scrap.</p>
+        </article>
+        <article class="glass-card">
+          <h3>Production Optimization</h3>
+          <p>Balance throughput, energy usage, and cost with AI‑driven planning.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__header" style="text-align:left; margin-left:0;">
+        <span class="pill">Related Capabilities</span>
+      </div>
+      <div class="solutions-grid">
+        <article class="glass-card">
+          <h3>Real‑Time Telemetry</h3>
+          <p>Stream sensor data and model metrics from lines and assets.</p>
+          <a href="../solutions/real-time-telemetry.html" class="link-more">View solution →</a>
+        </article>
+        <article class="glass-card">
+          <h3>Machine Learning</h3>
+          <p>Build models for anomaly detection on vibration, pressure, and other signals.</p>
+          <a href="../solutions/machine-learning.html" class="link-more">View solution →</a>
+        </article>
+        <article class="glass-card">
+          <h3>Process Automation</h3>
+          <p>Automate work orders, inspections, and reporting workflows.</p>
+          <a href="../solutions/process-automation.html" class="link-more">View solution →</a>
+        </article>
+      </div>
+    </section>
+  </main>
+     <!-- AUTH MODAL (Login / Create Account / Reset Password) -->
+  <div class="auth-modal" id="auth-modal">
+    <div class="auth-modal__backdrop"></div>
+    <div class="auth-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+      <button class="auth-modal__close" type="button" aria-label="Close">
+        ×
+      </button>
+
+      <div class="auth-modal__header">
+        <h2 id="auth-modal-title">Welcome to MJ Smart Solution</h2>
+        <p>Sign in to your workspace or create a new enterprise account.</p>
+      </div>
+
+      <div class="auth-modal__tabs">
+        <button class="auth-tab is-active" data-auth-tab="login" type="button">Log in</button>
+        <button class="auth-tab" data-auth-tab="signup" type="button">Create account</button>
+      </div>
+
+      <div class="auth-modal__body">
+        <!-- LOGIN PANEL -->
+        <form class="auth-panel auth-panel--active"
+              data-auth-panel="login"
+              onsubmit="event.preventDefault(); alert('Demo only – login is not connected to a backend.');">
+
+          <div class="form-field">
+            <label for="login-email">Work Email</label>
+            <input id="login-email" type="email" required placeholder="name@company.com" />
+          </div>
+
+          <div class="form-field">
+            <label for="login-password">Password</label>
+            <input id="login-password" type="password" required placeholder="Enter your password" />
+          </div>
+
+          <div class="auth-extra">
+            <label class="checkbox">
+              <input type="checkbox" />
+              <span>Remember me</span>
+            </label>
+            <!-- THIS LINK TRIGGERS RESET -->
+            <a href="#" class="auth-link js-open-reset">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn--primary auth-submit">Log in</button>
+        </form>
+
+        <!-- SIGNUP PANEL -->
+        <form class="auth-panel"
+              data-auth-panel="signup"
+              onsubmit="event.preventDefault(); alert('Demo only – signup is not connected to a backend.');">
+
+          <div class="form-field">
+            <label for="signup-name">Full Name</label>
+            <input id="signup-name" type="text" required placeholder="Enter your name" />
+          </div>
+
+          <div class="form-field">
+            <label for="signup-company">Company</label>
+            <input id="signup-company" type="text" required placeholder="Organization name" />
+          </div>
+
+          <div class="form-field">
+            <label for="signup-email">Work Email</label>
+            <input id="signup-email" type="email" required placeholder="name@company.com" />
+          </div>
+
+          <div class="form-field">
+            <label for="signup-password">Password</label>
+            <input id="signup-password" type="password" required placeholder="Create a strong password" />
+          </div>
+
+          <p class="auth-terms">
+            By creating an account, you agree to our
+            <a href="/terms.html" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+            and
+            <a href="/privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+          </p>
+
+          <button type="submit" class="btn btn--primary auth-submit">Create account</button>
+        </form>
+
+        <!-- RESET PASSWORD PANEL -->
+        <form class="auth-panel"
+              data-auth-panel="reset"
+              onsubmit="event.preventDefault(); alert('Demo only – a password reset link would be emailed to this address.');">
+
+          <p class="auth-reset-text">
+            Enter the email associated with your account and we’ll send you instructions
+            to reset your password.
+          </p>
+
+          <div class="form-field">
+            <label for="reset-email">Work Email</label>
+            <input id="reset-email" type="email" required placeholder="name@company.com" />
+          </div>
+
+          <button type="submit" class="btn btn--primary auth-submit">Send reset link</button>
+
+          <p class="auth-back-login">
+            Remembered your password?
+            <a href="#" class="auth-link js-back-login">Back to login</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
